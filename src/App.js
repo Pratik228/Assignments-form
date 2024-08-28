@@ -1,12 +1,10 @@
-import "dotenv/config";
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import FeedbackForm from "./components/FeedbackForm";
 import Dashboard from "./components/Dashboard";
 import ViewSubmissions from "./components/ViewSubmissions";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const AppLayout = () => {
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -18,5 +16,4 @@ const AppLayout = () => {
   );
 };
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+export default App;
